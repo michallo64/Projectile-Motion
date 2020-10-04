@@ -39,10 +39,9 @@ public class DrawView extends View {
 
     @Override
     public void onDraw(Canvas canvas) {
+        canvas.drawColor(Color.WHITE);
         canvas.translate(0, getHeight());   // reset where 0,0 is located
         canvas.scale(1,-1);    // invert
-//        Log.i("Height", String.valueOf(getHeight()));
-//        Log.i("Width", String.valueOf(getWidth()));
         for(Point p:resultList){
             canvas.drawPoint((float) p.x, (float) p.y, paint);
         }

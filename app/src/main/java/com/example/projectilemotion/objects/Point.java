@@ -1,15 +1,19 @@
 package com.example.projectilemotion.objects;
 
-public class Point {
+import java.io.Serializable;
+
+public class Point implements Serializable {
     public double x;
     public double y;
+    public double time;
 
     public Point(){
 
     }
-    public Point(double x, double y){
+    public Point(double x, double y, double time){
         this.x = x;
         this.y = y;
+        this.time = time;
     }
 
     @Override
